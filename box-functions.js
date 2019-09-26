@@ -20,16 +20,19 @@ const saveWorkouts = (workouts) => {
 }
 
 
+
 const box = async (roundTime) => {
     let count = 0
+      //Timer changes background color to green. 
+    //document.body.style.backgroundColor = "#39ff14"
     let round = setInterval(function () {
         console.log(count)
         //document.querySelector('#counter').innerHTML(`${count}`)
         count++
+  
         //added getElementbyId to show change on html page
         document.getElementById("counter").innerHTML = `${count}`
-        //document.querySelector('#counter').createElement('p').innerHTML(`${count}`)
-        //return `${count}`
+        
         if (count >= roundTime) {
             document.getElementById("counter").innerHTML = `Ding Ding Ding`
             console.log('ding ding ding')
@@ -43,11 +46,12 @@ const box = async (roundTime) => {
 
 // eslint-disable-next-line no-unused-vars
 let boxCountDown = function (roundTime, breakTime, totalRounds, roundsPassed = 0) {
-
+    document.body.style.backgroundColor = "#39ff14"
     //box() initiolly, followed by box() again to emulate break. 
     box(roundTime).then(() => {
         setTimeout(function () {
             box(breakTime)
+            document.body.style.backgroundColor = "red"
         }, roundTime * 1000)
     }).then(() => {
         //This part executes after a round is complete.

@@ -1,42 +1,56 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        
-    </head>
-    <body>
-       
-        <h2>Edit Workout</h2>
-        <a href="index.html">Home</a>
-        
-        <br /><br />
-        <hr>
-        <div style="float: right">
-            <button id="delete-workout">Delete Workout</button> 
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Boxing Timer</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Heebo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <div class="workoutpanel">
+        <div>
+            <h2>Edit Workout</h2>
+            <a href="index.html">Home</a>
         </div>
-        
-        <br />
-           
+        <div class="item2">Round (X of X)
+        </div>
+        <div></div>
+        <div>
             Workout Title:
             <input type="text" placeholder="name" id="workout-name" name="name"><br />
-            Round Time (ie Sec):
+            Round Time:
             <input type="text" placeholder="roundTime" id="round-time" name="roundTime"><br />
-            Break (Sec):
+            Break Time:
             <input type="text" placeholder="Break Time" id="break-time" name="breakTime"><br />
             Total Rounds/Sets:
             <input type="text" placeholder="Rounds Sets" id="total-rounds"><br />
-            <button id="start-workout">Start Workout</button> 
-        
-        <br />
-            <hr>
-        <div id="counter" style="font-size: 300px">
-
+            <button id="start-workout">Start Workout</button>
         </div>
+        <div>
+            <div id="counter"></div>
+        </div>
+        <div>
+            <div style="float: right">
+                <button id="delete-workout">Delete Workout</button>
+            </div>
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
 
-        <script src="v4.js"></script>
-        <script src="box-functions.js"></script>
-        <script src="workout.js"></script> 
-        
-    </body>
+
+    <script src="v4.js"></script>
+    <script src="box-functions.js"></script>
+    <script src="workout.js"></script>
+
+</body>
+
 </html>
-
