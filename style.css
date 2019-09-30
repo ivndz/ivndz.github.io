@@ -1,0 +1,85 @@
+html * {
+    font-family: 'Heebo', sans-serif;
+    
+}
+
+a, a:visited{
+    color:maroon;
+
+}
+a:hover {
+    color:red;
+}
+
+
+
+
+
+/** Workout Play Page **/
+.workoutpanel {
+    padding: 10px 10px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+/** top counter in workoutpane **/
+.round-header {
+    align-items: center;
+    font-size: 2.25em;
+    font-weight: bold;
+    text-align: center;
+}
+
+/** Bottom minute header in workoutpane **/
+#minute-header {
+    align-items: center;
+    font-size: 5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/** counter in workoutpanel **/
+#counter {
+    align-items: center;
+    height:50vh;
+    font-size: 20rem;
+    font-weight: bold;
+    text-align: center;
+    border: 0.2rem black solid;
+}
+
+/** index  **/
+
+.wrapper{
+    padding: 10px 10px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap:1em;
+    grid-auto-rows:minmax(100px, auto)
+ 
+}
+
+.createbox{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-gap: 1em;
+}
+.createbox > div {    
+    padding:1em;
+
+}
+
+.workoutlist{
+    font-weight: bold;
+    font-size: 1.4em;
+    background: white;
+    padding: .25em;
+}
+
+.workoutlist > div:nth-child(odd){
+    background: #eee;
+}
+
+.logo {  
+    height: 100px;
+}
