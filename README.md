@@ -1,2 +1,0 @@
-# ivndz.github.io
-Website
