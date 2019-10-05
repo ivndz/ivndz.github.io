@@ -1,5 +1,12 @@
 Boxing Timer Todo
-====
+Dev 2
+ -[ ] clean console log messages
+- [x] fix box function now async await 
+- [ ] add starting bell
+- [ ] fix clear workout button
+- [ ] fix responsive grid layout problem move/minutes
+End of Week 8
+==== 
 - [x] add round of round header
 - [x] add countdown function to box-functions.js
 - [x] add yellow to break and rounds greater than 20secs
@@ -23,6 +30,3 @@ Boxing Timer Todo
 - [x] Create a todo.md in your directory you are using for this work (mine is w8 inside playground) and create a list of things you need finish for next week. 
 - [x] Create a https://raw.githack.com/ (Links to an external site.) link for your index.html or give us an external link so we can review your progress.
 
-Leading into dev 2
-- [ ] add starting bell
-- [ ] fix clear workout button

@@ -66,10 +66,14 @@ workoutTotalRound.addEventListener('change',(e) => {
 document.querySelector('#start-workout').addEventListener('click',() => {
     // eslint-disable-next-line no-undef
     console.log(typeof(workout.roundTime))
-  
-
+    document.getElementById('start-workout').disabled = true
     boxCountDown(workout.roundTime,workout.breakTime,workout.totalRounds)
      
+ })
+
+
+ document.querySelector('#clear-workout').addEventListener('click',() => {
+    window.location.reload()
  })
 
 

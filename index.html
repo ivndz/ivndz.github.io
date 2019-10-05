@@ -12,38 +12,65 @@
 </head>
 
 <body>
-    <div><img src="glove.svg" class="logo"></div>
-    <h1>Boxing Timer App</h1>
-    <h2>Get to work.</h2>
+        <!-- <div id="logo">Basic Boxing Timer</div> -->
+   
     <div class="wrapper">
+        <div id="title-logo">Basic Boxing Timer</div>
+       <div></div>
         <div>
-            <input type="text" id="search-text" placeholder="Filter Workouts">
+                <input type="text" id="search-text" placeholder="Search workouts">
+
             <h1>Workout List</h1>
             <div id="workouts" class="workoutlist">
-
+                    
             </div>
 
         </div>
-        <div class="createbox">
-            <div>
+
+        <div>  
                 <form id="add-workout">
-                    <h4>Create a workout.</h4>
-                    Workout Title:
-                    <input type="text" placeholder="name" name="name"><br />
-                    Round Time:
-                    <input type="text" placeholder="Round time in seconds" name="roundTime"><br />
-                    Break Time:
-                    <input type="text" placeholder="Break time in seconds" name="breakTime"><br />
-                    Total Rounds/Sets:
-                    <input type="text" placeholder="Total Rounds / Sets" name="totalRounds"><br />
-                    <button>Create Workout</button>
-                </form>
+            <div class="createform">
+                <h2>Create a workout.</h2> 
+                    
+                <div>Workout Title:</div>
+                <div>
+                     <input type="text" placeholder="Name" name="name"><br />
+
+                </div>
+                <div>
+                     Round Time:
+                </div>
+                <div>
+                        <input type="text" placeholder="Round time in seconds" name="roundTime"><br />
+
+                </div>
+                <div>
+                        Break Time:
+                </div>
+                <div>
+                        <input type="text" placeholder="Break time in seconds" name="breakTime"><br />
+
+                </div>
+                <div>
+                        Total Rounds/Sets:                   
+                </div>
+                <div>
+                        <input type="text" placeholder="Total Rounds / Sets" name="totalRounds"><br />
+
+                </div>
+                <div><br />
+                        <button>Create Workout</button>
+                </div>
             </div>
-            <div>     
-            </div>
+        </form>
+        
+
+             
+           </div>
+           <div>Basic Boxing Timer</div>
 
         </div>
-    </div>
+    
 
 
     <script src="v4.js"></script>

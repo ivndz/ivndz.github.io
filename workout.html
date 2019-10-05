@@ -16,29 +16,39 @@
 
     <div class="workoutpanel">
         <div>
-                <button id="start-workout">Start Workout</button><br />
-                <input type="checkbox" id="mute-sound" value="mutesound"> Mute Sound<br>
-                <a href="index.html">Return home</a>
-        </div>
-        <div class="round-header" id="round-header">
+            <h1><a href="index.html">Simple Boxing Timer</a></h1>
+                <p>
+                    <button id="start-workout">Start Workout</button> 
+                    <input type="checkbox" id="mute-sound" value="mutesound"> Mute Sound<br />
+                </p>
+                
+                
         </div>
         <div>
+            
+                <button id="clear-workout"> Clear Workout</button>
                 <div style="float: right">
                         <button id="delete-workout">Delete Workout</button>
                     </div>
         </div>
+
+        <div class="round-header" id="round-header">
+            Get
+        </div>
         <!-- fr-->
         <div>
-          <button id="clear-workout"> Clear Workout</button>
+        
         </div>
 
-        <div>
-            <div id="counter"></div>
-        </div>
+        <div id="counter">Ready</div>
         <div>
  
         </div>
         <!-- fr -->
+        <div id="minute-header">
+            0:00
+        </div>
+
         <div>
             <!-- Form Editor -->
             <p><strong>Workout Editor</strong></p>
@@ -63,10 +73,7 @@
                 </div>  
             <!-- Form Editor -->
         </div>
-        <div>
-            <div id="minute-header">
-            </div>
-        </div>
+
         <div>
                 <audio id="bell-audio">
                         <source src="audio/bell.mp3" type="audio/mpeg">

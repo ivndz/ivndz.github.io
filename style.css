@@ -1,25 +1,25 @@
 html * {
-    font-family: 'Heebo', sans-serif;
-    
+    font-family: 'Heebo', sans-serif;    
 }
 
 a, a:visited{
-    color:maroon;
+    color:black;
 
 }
 a:hover {
-    color:red;
+    color: #99ff99;
 }
-
-
-
 
 
 /** Workout Play Page **/
 .workoutpanel {
     padding: 10px 10px;
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    /**grid-template-columns: 1fr 2fr 1fr; **/
+    /* grid-template-columns: repeat(auto-fill, minmax(400px, 100%)); */
+    grid-template-columns: repeat(auto-fill, minmax(370px, 100% ));
+    object-fit: cover;
+
 }
 
 /** top counter in workoutpane **/
@@ -41,28 +41,57 @@ a:hover {
 /** counter in workoutpanel **/
 #counter {
     align-items: center;
-    height:50vh;
-    font-size: 20rem;
-    font-weight: bold;
+    height:minmax(25vh, auto);
+    font-size: 22vw;
+    font-weight: 900;
     text-align: center;
     border: 0.2rem black solid;
 }
 
 /** index  **/
+#logo {
+    font-weight: bolder;
+    font-size:4rem;
+    margin:0 auto;
+    float: center;
 
-.wrapper{
-    padding: 10px 10px;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-gap:1em;
-    grid-auto-rows:minmax(100px, auto)
- 
 }
 
-.createbox{
+#title-logo{
+    /* grid-column: 1 / span 2; */
+    font-weight: bolder;
+    font-size:4rem;
+}
+.wrapper{
+    
+    width:90%;
+    margin: 0 auto;
+    padding: 10px 10px;
     display: grid;
-    grid-template-columns: 1fr 1fr ;
-    grid-gap: 1em;
+    /* grid-template-columns: 1fr 1fr; */
+    grid-gap:2em;
+    /* grid-auto-rows:minmax(100px, auto) */
+    grid-template-columns: repeat(auto-fill, minmax(30vh, 40vw));
+    /* grid-template-areas:'showcase showcase top-box-a'; */
+    object-fit: cover;
+    align-self: end;
+    
+}
+
+input {
+    width: 90%;
+    font-size: 1.8rem;
+    background-color: #99ff99;
+    border: black thin solid;
+  }
+
+.createform{
+    display: grid;
+    grid-template-columns: 1fr;
+    font-weight: bold;
+    /* color: #c5001a; */
+    /* background-color:#e4e3db; */
+    padding: 10px;
 }
 .createbox > div {    
     padding:1em;
