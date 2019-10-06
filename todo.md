@@ -4,6 +4,7 @@ Dev 2
 - [x] fix box function now async await 
 - [x] fix clear workout button
 - [x] fix responsive grid layout problem move/minutes
+- [x] all dev2 req.
 
 End of Week 8
 ==== 
@@ -21,8 +22,6 @@ End of Week 8
 - [x] fix round 0 of 2 bug, round count starts at 0 instead of 1. First round should say round 1 of 2 etc.
 - [x] fix round 3 of 2 bug, timer goes over by 1 round.  
 - [x] wire mute sound checkbox
-
-
 - [x] Refactor your function to use arrow function and shorten syntax (where possible).
 - [x] Refactor any existing code using the Ternary (Conditional) Operator.
 - [x] Refactor your function to getSavedData (or whatever you call it) to include a try catch block.
