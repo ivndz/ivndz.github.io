@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Boxing Timer</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Heebo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+    <div class="workoutpanel">
+        <div>
+            <h1><a href="index.html">Simple Boxing Timer</a></h1>
+                    <button id="start-workout">Start Workout</button> 
+                    
+                         
+        </div>
+        <div id="mute-sound">
+               
+            <input type="checkbox" id="mute-sound" value="mutesound"> Mute Sound
+                
+            
+        </div>
+        <div>   
+                <button id="clear-workout"> Clear Workout</button>
+                <div style="float: right">
+                        <button id="delete-workout">Delete Workout</button>
+                </div>
+        </div>
+
+        <div class="round-header" id="round-header">
+            Get
+        </div>
+        <!-- fr-->
+        <div>
+        
+        </div>
+
+        <div id="counter">Ready</div>
+        <div>
+ 
+        </div>
+        <!-- fr -->
+        <div id="minute-header">
+            0:00
+        </div>
+
+        <div>
+            <!-- Form Editor -->
+            <p><strong>Workout Editor</strong></p>
+                <div>Workout Title:</div>
+                <div>
+                    <input type="text" placeholder="name" id="workout-name" name="name">
+                </div> 
+    
+                <div>Round Time:</div>
+                <div>
+                    <input type="text" placeholder="roundTime" id="round-time" name="roundTime"><br />
+                </div>
+    
+                <div>Break Time:</div>
+                <div>
+                    <input type="text" placeholder="Break Time" id="break-time" name="breakTime"><br />
+                </div>
+    
+                <div> Total Rounds/Sets:</div>
+                <div>
+                    <input type="text" placeholder="Rounds Sets" id="total-rounds"><br />
+                </div>  
+            <!-- Form Editor -->
+        </div>
+
+        <div>
+                <audio id="bell-audio">
+                        <source src="audio/bell.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                </audio>
+
+        </div>
+        <!-- fr -->
+    </div>
+
+
+    <script src="js/v4.js"></script>
+    <script src="js/box-functions.js"></script>
+    <script src="js/workout.js"></script>
+
+</body>
+
+</html>
