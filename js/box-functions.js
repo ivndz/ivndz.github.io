@@ -54,7 +54,7 @@ const box = async (roundTime) => {
 
     try {
 
-        let round =  await setInterval(function () {
+        let round =  await setInterval(() => {
 
                    
             document.getElementById("minute-header").innerHTML = workoutMinutes(count)
@@ -62,7 +62,6 @@ const box = async (roundTime) => {
             //main counter at the center of the page
             document.getElementById("counter").innerHTML = `${count}`
            
-    
                 count--
             
              //yellow only shows on round or break times higher than 20 secs
@@ -144,7 +143,7 @@ const renderWorkoutDOM = (workout) => {
     
 
     linkWorkout.textContent = `${workout.name} - Round Time/secs: ${workout.roundTime}, Break Time/secs: ${workout.breakTime}, Total Rounds/Sets: ${workout.totalRounds} `
-    linkWorkout.setAttribute('href',`/workout.html#${workout.id}`)
+    linkWorkout.setAttribute('href',`workout.html#${workout.id}`)
     //delete in-line
     workoutEl.appendChild(theWorkout).appendChild(linkWorkout)
     
@@ -154,10 +153,10 @@ const renderWorkoutDOM = (workout) => {
 
 // eslint-disable-next-line no-unused-vars
 const renderWorkouts = (workouts,filters) => {
+    
     //function to return filtered selection
-     const filteredWorkouts = workouts.filter(function(workout){
-     return workout.name.toLowerCase().includes(filters.searchText.toLowerCase())
- })   
+    const filteredWorkouts = workouts.filter(workout => workout.name.toLowerCase().includes(filters.searchText.toLowerCase())) 
+
     //select and clear the div titled workout
     document.querySelector('#workouts').innerHTML = ''
 
@@ -170,7 +169,7 @@ const renderWorkouts = (workouts,filters) => {
 
 const removeWorkout = (id) => {
     // findIndex returns the index of the function criteria, workout were id's match
-    const workoutIndex = workouts.findIndex(function(workout){
+    const workoutIndex = workouts.findIndex((workout) => {
         return workout.id === id
     })
 
@@ -182,3 +181,63 @@ const removeWorkout = (id) => {
 
 }
 
+const validateSeconds = (elementId,element) => {
+    
+    //default error message
+    const errorValue = 'Error: Please provide time in seconds format ##. Value also has to be greater than 0.'
+   
+    
+    //validate that value is a integer and not blank
+    if( element.value == '' || isNaN(element.value) || element.value <= 0 ) {
+       
+       document.getElementById(elementId).style.color = "red"
+       document.getElementById(elementId).innerHTML = errorValue
+    
+       element.focus() 
+    
+       throw new Error(errorValue)
+   
+    }
+
+    //if value  validates refreshes the color and original text back to default. 
+    //prevents error from being presistent to the UX.
+    document.getElementById(elementId).style.color = "black"
+
+    switch(elementId) {
+        case "round-time-text":
+            document.getElementById(elementId).innerHTML =  'Round Time: '
+            break
+        case "break-time-text":
+            document.getElementById(elementId).innerHTML = 'Break Time:'
+            break
+        case "total-rounds-time-text":
+             document.getElementById(elementId).innerHTML = 'Total Rounds/Sets: '
+    }
+
+
+}
+
+const validateName = (elementId,element) => {
+     
+    //default error message
+    const errorValue = 'Workout title too short. '
+   
+ 
+    //Check length of title
+    if( String(element.value.length) <= 2 ) {
+       
+       document.getElementById(elementId).style.color = "red"
+       document.getElementById(elementId).innerHTML = errorValue
+    
+       element.focus() 
+    
+       throw new Error(errorValue)
+   
+    }
+    console.log('here')
+    //if value  validates refreshes the color and original text back to default. 
+    //prevents error from being presistent to the UX.
+    document.getElementById(elementId).style.color = "black"
+    document.getElementById(elementId).innerHTML = 'Workout Title:'
+  
+}

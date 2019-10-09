@@ -9,7 +9,7 @@ let filters = {
 
 
 //function to search workouts and input causes the action
-document.querySelector('#search-text').addEventListener('input',function(e){
+document.querySelector('#search-text').addEventListener('input',(e) => {
     //search #search text for words and assign then to e target value
     filters.searchText = e.target.value
     renderWorkouts(workouts,filters)
@@ -19,9 +19,17 @@ document.querySelector('#search-text').addEventListener('input',function(e){
 
 //adding workout eventlistener
 //submit eventlistener ==> because #add-workout is a form. 
-document.querySelector('#add-workout').addEventListener('submit', function(e){
-
+document.querySelector('#add-workout').addEventListener('submit', (e) => {
+    
     e.preventDefault() // prevent refresh
+
+    validateName("workout-title", e.target.elements.name)
+    validateSeconds("round-time-text", e.target.elements.roundTime)
+    validateSeconds("break-time-text", e.target.elements.breakTime)
+    validateSeconds("total-rounds-time-text", e.target.elements.totalRounds)
+
+
+    
     workouts.push({
         // key = e.target.elements.**match to html**
         id: uuidv4(),

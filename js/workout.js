@@ -38,27 +38,30 @@ delEl.addEventListener('click',() => {
 })
 
 
-
 workoutNameEl.addEventListener('change',(e) =>{
     workout.name = e.target.value
+    validateName("workout-title", e.target)
     saveWorkouts(workouts)
      
 })
 
 workoutRoundTime.addEventListener('change',(e) => {
     workout.roundTime = Number(e.target.value)
+    validateSeconds("round-time-text", e.target)
     saveWorkouts(workouts)
      
 })
 
 workoutBreakTime.addEventListener('change',(e) => {
     workout.breakTime = Number(e.target.value)
+    validateSeconds("break-time-text", e.target)
     saveWorkouts(workouts)
      
 })
 
 workoutTotalRound.addEventListener('change',(e) => {
     workout.totalRounds = Number(e.target.value)
+    validateSeconds("total-rounds-time-text", e.target)
     saveWorkouts(workouts)
 })
 
@@ -80,7 +83,7 @@ window.addEventListener('storage',(e) => {
     if(e.key === 'workouts'){
 
         workouts = JSON.parse(e.newValue)
-        workout = workouts.find(function(workout){
+        workout = workouts.find((workout) => {
             return workout.id === workoutId
         })
         
